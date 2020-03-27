@@ -1,5 +1,8 @@
 #include <glib/gprintf.h>
+
+extern "C" {
 #include <i3ipc-glib/i3ipc-glib.h>
+}
 
 int main() {
   i3ipcConnection *conn;
