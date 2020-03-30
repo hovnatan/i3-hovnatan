@@ -21,6 +21,11 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 find_package(PkgConfig REQUIRED)
 pkg_search_module(PKG_I3IPC REQUIRED IMPORTED_TARGET i3ipc-glib-1.0)
+pkg_search_module(PKG_X11 REQUIRED IMPORTED_TARGET x11)
+pkg_search_module(PKG_XTST REQUIRED IMPORTED_TARGET xtst)
+
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
 
 find_package(Boost COMPONENTS program_options REQUIRED)
 set(Boost_USE_MULTITHREADED ON)
